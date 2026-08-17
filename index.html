@@ -3,39 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Monk Edgework | Handcrafted Knives</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #111111;
+            color: #e8e2d8;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background:
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+                #1a1a1a;
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 10vw, 7rem);
+            letter-spacing: 8px;
+            font-weight: normal;
+            color: #f0ece4;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #b99b6b;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(17,17,17,.95);
+            border-bottom: 1px solid #3a3a3a;
+            text-align: center;
+            padding: 18px 10px;
+        }
+
+        nav a {
+            color: #e8e2d8;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: .9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #b99b6b;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #f0ece4;
+        }
+
+        .intro {
+            max-width: 750px;
+            font-size: 1.15rem;
+            color: #c7c1b7;
+        }
+
+        .divider {
+            width: 70px;
+            height: 2px;
+            background: #b99b6b;
+            margin: 25px 0 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            border: 1px solid #363636;
+            padding: 35px 25px;
+            background: #181818;
+        }
+
+        .card h3 {
+            color: #b99b6b;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #bbb5ac;
+        }
+
+        .available {
+            background: #171717;
+            border-top: 1px solid #292929;
+            border-bottom: 1px solid #292929;
+        }
+
+        footer {
+            text-align: center;
+            padding: 45px 20px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: .9rem;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                margin: 0 7px;
+                font-size: .72rem;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            header h1 {
+                letter-spacing: 4px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
     <header>
         <h1>MONK EDGEWORK</h1>
-        <p>Handcrafted knives & leatherwork</p>
+        <p>Handcrafted Knives &amp; Leatherwork</p>
     </header>
 
-    <main>
-        <h2>Built by hand. Made to be used.</h2>
+    <nav>
+        <a href="#knives">Knives</a>
+        <a href="#leather">Leather</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-        <p>
-            Handcrafted knives, forged and finished with attention to detail.
+    <section id="knives">
+        <h2>The Knives</h2>
+        <div class="divider"></div>
+
+        <p class="intro">
+            Handcrafted knives made one at a time, with an emphasis on
+            function, character, and craftsmanship.
         </p>
 
-        <h2>The Work</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Forged Blades</h3>
+                <p>
+                    Hand-forged blades shaped with traditional techniques
+                    and finished by hand.
+                </p>
+            </div>
 
-        <p>
-            Custom knives, leather sheaths, and handmade pieces from Monk Edgework.
+            <div class="card">
+                <h3>Stock Removal</h3>
+                <p>
+                    Carefully shaped blades finished with attention to
+                    geometry, balance, and edge performance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Custom Work</h3>
+                <p>
+                    One-of-a-kind knives built around the materials,
+                    proportions, and details that make each piece unique.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leather" class="available">
+        <h2>Leatherwork</h2>
+        <div class="divider"></div>
+
+        <p class="intro">
+            Handmade leather sheaths designed specifically for each knife,
+            with hand-dyed finishes and traditional leatherworking techniques.
         </p>
+    </section>
 
-        <h2>Available Knives</h2>
+    <section id="about">
+        <h2>About Monk Edgework</h2>
+        <div class="divider"></div>
 
-        <p>
-            Check back for available pieces.
+        <p class="intro">
+            Monk Edgework is a small, independent knife-making workshop
+            focused on creating functional blades with a handmade character.
+            Every knife is shaped, finished, and assembled by hand.
         </p>
+    </section>
 
+    <section id="contact" class="available">
         <h2>Contact</h2>
+        <div class="divider"></div>
 
-        <p>
-            Interested in a knife? Get in touch.
+        <p class="intro">
+            Interested in a knife or want to discuss a custom piece?
+            Get in touch with Monk Edgework.
         </p>
-    </main>
+    </section>
+
+    <footer>
+        © 2026 Monk Edgework
+    </footer>
+
 </body>
 </html>
